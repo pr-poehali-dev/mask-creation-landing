@@ -175,7 +175,7 @@ const ContentSections = () => {
     <>
       <section className="py-12 md:py-20 container mx-auto px-4 md:px-6">
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Наши работы</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-white">Наши работы</h2>
           <p className="text-white/90 text-lg md:text-xl">Мы понимаем специфику именно вашей задачи</p>
         </div>
 
@@ -183,12 +183,12 @@ const ContentSections = () => {
           {categories.map((cat, idx) => (
             <Card key={idx} className="group relative h-[300px] md:h-[400px] border-warm/30 overflow-hidden cursor-pointer hover-scale bg-[#0a0a0a]">
               <div className="absolute inset-0">
-                <img src={cat.img} alt={cat.title} className="w-full h-full object-cover" />
+                <img src={cat.img} alt={cat.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent z-10"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 z-20">
                 <h3 className="text-xl md:text-2xl font-serif font-bold mb-2 text-white">{cat.title}</h3>
-                <p className="text-white/80 text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity">{cat.description}</p>
+                <p className="text-white/90 text-sm md:text-base opacity-0 group-hover:opacity-100 transition-opacity duration-300">{cat.description}</p>
               </div>
             </Card>
           ))}
@@ -222,7 +222,7 @@ const ContentSections = () => {
       </section>
 
       <section className="py-12 md:py-20 container mx-auto px-4 md:px-6">
-        <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-10 md:mb-14 text-center text-white">Почему выбирают нас</h2>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-10 md:mb-14 text-center text-white">Почему выбирают нас</h2>
 
         <div className="grid sm:grid-cols-2 gap-6 md:gap-8 mb-10">
           {benefits.map((benefit, idx) => (
@@ -252,7 +252,7 @@ const ContentSections = () => {
       <section className="py-12 md:py-20 bg-[#0f0f0f]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-14">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Процесс создания</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-white">Процесс создания</h2>
             <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto">От идеи к осязаемому воплощению. Мы не печатаем на 3D-принтерах — мы создаем руками.</p>
           </div>
 
@@ -278,7 +278,7 @@ const ContentSections = () => {
 
       <section className="py-12 md:py-20 container mx-auto px-4 md:px-6">
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Добавьте индивидуальности</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-white">Добавьте индивидуальности</h2>
           <p className="text-white/90 text-lg md:text-xl">Персонализация без границ. Конструктор вашего кошмара.</p>
         </div>
 
@@ -346,7 +346,7 @@ const ContentSections = () => {
       <section className="py-12 md:py-20 bg-[#0f0f0f]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-14">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Прозрачные цены</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-white">Прозрачные цены</h2>
             <p className="text-white/90 text-lg md:text-xl">Стоимость зависит от сложности, но мы всегда честны с вами.</p>
           </div>
 
@@ -410,7 +410,7 @@ const ContentSections = () => {
       <section className="py-12 md:py-20 bg-[#0f0f0f]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-14">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Завершите образ</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-white">Завершите образ</h2>
             <p className="text-white/90 text-lg md:text-xl">Полезные дополнения, которые сохранят артефакт.</p>
           </div>
 
@@ -434,7 +434,7 @@ const ContentSections = () => {
       <section className="py-12 md:py-20 container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Частые вопросы</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-white">Частые вопросы</h2>
             <p className="text-white/90 text-lg md:text-xl">Честные ответы на самые популярные сомнения наших клиентов</p>
           </div>
 
@@ -452,7 +452,7 @@ const ContentSections = () => {
       <section className="py-12 md:py-20 bg-[#0f0f0f]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-10 md:mb-14">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Как заказать?</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-white">Как заказать?</h2>
             <p className="text-white/90 text-lg md:text-xl">Вам не нужен чертеж. Достаточно идеи на салфетке.</p>
           </div>
 
@@ -470,7 +470,7 @@ const ContentSections = () => {
 
       <section className="py-12 md:py-20 container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 md:mb-6 text-white">Готовы воплотить свою<br />мечту в реальность?</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 md:mb-6 text-white">Готовы воплотить свою<br />мечту в реальность?</h2>
           <p className="text-white/90 text-lg md:text-xl mb-8 md:mb-12">Не ограничивайте свою фантазию. Расскажите нам о своей идее прямо сейчас, и мы превратим её в вечный артефакт.</p>
 
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">

@@ -1,18 +1,27 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 bg-[#0a0a0a]"></div>
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" style={{ transform: `translateY(${scrollY * 0.5}px)` }}>
         <img src="https://cdn.poehali.dev/projects/f8def378-8058-4886-b565-bccedcf2e505/files/1397b87a-df2b-49cb-82bb-247926328521.jpg" alt="Mask" className="w-full h-full object-cover opacity-30" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/70 to-transparent"></div>
       <div className="absolute inset-0 noise-texture"></div>
       
       <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
-        <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif font-bold mb-6 animate-fade-in leading-[1.1] text-white drop-shadow-[0_0_30px_rgba(249,115,22,0.3)]">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 animate-fade-in leading-[1.1] text-white drop-shadow-[0_0_30px_rgba(249,115,22,0.3)]">
           Стань кем угодно.<br />Маски ручной работы,<br />меняющие реальность
         </h1>
         <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-6 max-w-4xl mx-auto animate-fade-in font-medium" style={{ animationDelay: '0.2s' }}>
