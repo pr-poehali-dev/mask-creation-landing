@@ -81,15 +81,17 @@ const Index = () => {
       </header>
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-dark via-charcoal to-graphite"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-warm/10 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f]"></div>
+        <div className="absolute inset-0 noise-texture"></div>
+        <div className="absolute inset-0 concrete-texture opacity-20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-warm/15 via-transparent to-transparent"></div>
         
         <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-serif font-bold mb-6 md:mb-8 animate-fade-in leading-tight">
-            Маски ручной работы<br />на заказ
+          <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif font-bold mb-6 md:mb-8 animate-fade-in leading-[1.1] text-white drop-shadow-[0_0_30px_rgba(249,115,22,0.3)]">
+            Стань кем угодно.<br />Маски ручной работы,<br />меняющие реальность
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-light/80 mb-4 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            Для квестов, кино, косплея и коллекций.<br />От эскиза до осязаемого артефакта.
+          <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-4 max-w-4xl mx-auto animate-fade-in font-medium" style={{ animationDelay: '0.2s' }}>
+            Для кино, хоррор-квестов и коллекций.<br />От эскиза до неубиваемого артефакта за 7 дней.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-8 md:mb-12 animate-fade-in text-sm md:text-base" style={{ animationDelay: '0.4s' }}>
@@ -123,8 +125,8 @@ const Index = () => {
 
       <section className="py-16 md:py-24 container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Наши работы</h2>
-          <p className="text-light/70 text-lg md:text-xl">Мы понимаем специфику именно вашей задачи</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Наши работы</h2>
+          <p className="text-white/80 text-xl md:text-2xl">Мы понимаем специфику именно вашей задачи</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
@@ -146,8 +148,8 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-gradient-to-b from-dark to-charcoal">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4 md:mb-6 text-center">История происхождения</h2>
-            <h3 className="text-2xl md:text-3xl font-serif mb-6 md:mb-8 text-center text-warm">Рожденные в суровых условиях квестов</h3>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 md:mb-6 text-center text-white">История происхождения</h2>
+            <h3 className="text-2xl md:text-4xl font-serif mb-6 md:mb-8 text-center text-warm">Рожденные в суровых условиях квестов</h3>
             
             <div className="space-y-4 md:space-y-6 text-base md:text-lg text-light/80 leading-relaxed">
               <p>Obrazwill начался не с бизнес-плана. Мы создавали хоррор-квесты и устали от масс-маркета. Дешевые маски ломались, давили актерам на лицо и выглядели как пластиковые игрушки.</p>
@@ -163,7 +165,7 @@ const Index = () => {
       </section>
 
       <section className="py-16 md:py-24 container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-12 md:mb-16 text-center">Почему выбирают нас</h2>
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-12 md:mb-16 text-center text-white">Почему выбирают нас</h2>
 
         <div className="grid sm:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
           {benefits.map((benefit, idx) => (
@@ -190,8 +192,8 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-gradient-to-b from-charcoal to-dark">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Процесс создания</h2>
-            <p className="text-light/70 text-base md:text-xl">От идеи к осязаемому воплощению. Мы не печатаем на 3D-принтерах — мы создаем руками.</p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Процесс создания</h2>
+            <p className="text-white/80 text-lg md:text-2xl">От идеи к осязаемому воплощению. Мы не печатаем на 3D-принтерах — мы создаем руками.</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -213,8 +215,8 @@ const Index = () => {
 
       <section className="py-16 md:py-24 container mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Добавьте индивидуальности</h2>
-          <p className="text-light/70 text-base md:text-xl">Персонализация без границ. Конструктор вашего кошмара.</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Добавьте индивидуальности</h2>
+          <p className="text-white/80 text-lg md:text-2xl">Персонализация без границ. Конструктор вашего кошмара.</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
@@ -235,8 +237,8 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-gradient-to-b from-dark to-charcoal">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Прозрачные цены</h2>
-            <p className="text-light/70 text-base md:text-xl">Стоимость зависит от сложности, но мы всегда честны с вами.</p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Прозрачные цены</h2>
+            <p className="text-white/80 text-lg md:text-2xl">Стоимость зависит от сложности, но мы всегда честны с вами.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto mb-6 md:mb-8">
@@ -267,8 +269,8 @@ const Index = () => {
       <section className="py-16 md:py-24 container mx-auto px-4 md:px-6">
         <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-gradient-to-br from-warm/20 via-charcoal to-graphite border-warm/30">
           <div className="text-center">
-            <h2 className="text-2xl md:text-4xl font-serif font-bold mb-4">Подарите возможность стать кем угодно</h2>
-            <p className="text-light/80 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">Сертификат на изготовление маски в Obrazwill — идеальный подарок для косплеера, фаната хорроров или коллекционера.</p>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-white">Подарите возможность стать кем угодно</h2>
+            <p className="text-white/90 text-lg md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto">Сертификат на изготовление маски в Obrazwill — идеальный подарок для косплеера, фаната хорроров или коллекционера.</p>
             
             <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6 md:mb-8">
               <Button variant="outline" size="lg" className="border-warm text-warm hover:bg-warm hover:text-dark text-sm md:text-base">5 000 ₽</Button>
@@ -287,8 +289,8 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-gradient-to-b from-charcoal to-dark">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Завершите образ</h2>
-            <p className="text-light/70 text-base md:text-xl">Полезные дополнения, которые сохранят артефакт.</p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Завершите образ</h2>
+            <p className="text-white/80 text-lg md:text-2xl">Полезные дополнения, которые сохранят артефакт.</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
@@ -306,8 +308,8 @@ const Index = () => {
       <section className="py-16 md:py-24 container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Частые вопросы</h2>
-            <p className="text-light/70 text-base md:text-xl">Честные ответы на самые популярные сомнения наших клиентов</p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Частые вопросы</h2>
+            <p className="text-white/80 text-lg md:text-2xl">Честные ответы на самые популярные сомнения наших клиентов</p>
           </div>
 
           <div className="space-y-4">
@@ -324,8 +326,8 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-gradient-to-b from-charcoal to-dark">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Как заказать?</h2>
-            <p className="text-light/70 text-base md:text-xl">Вам не нужен чертеж. Достаточно идеи на салфетке.</p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 text-white">Как заказать?</h2>
+            <p className="text-white/80 text-lg md:text-2xl">Вам не нужен чертеж. Достаточно идеи на салфетке.</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
@@ -342,8 +344,8 @@ const Index = () => {
 
       <section className="py-16 md:py-24 container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4 md:mb-6">Готовы воплотить свою<br />мечту в реальность?</h2>
-          <p className="text-light/70 text-base md:text-xl mb-8 md:mb-12">Не ограничивайте свою фантазию. Расскажите нам о своей идее прямо сейчас, и мы превратим её в вечный артефакт.</p>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 md:mb-6 text-white">Готовы воплотить свою<br />мечту в реальность?</h2>
+          <p className="text-white/80 text-lg md:text-2xl mb-8 md:mb-12">Не ограничивайте свою фантазию. Расскажите нам о своей идее прямо сейчас, и мы превратим её в вечный артефакт.</p>
 
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             <Button size="lg" className="bg-warm text-dark hover:bg-warm-light">
