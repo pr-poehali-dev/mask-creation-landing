@@ -310,8 +310,36 @@ const ContentSections = () => {
           ))}
         </div>
 
-        <Card className="p-6 md:p-8 bg-gradient-to-r from-warm/10 to-warm-light/10 border-warm/30 text-center">
-          <p className="text-lg md:text-xl text-white">Есть безумная идея? Мы реализуем и её. Опишите задачу, и мы придумаем, как это сделать технически.</p>
+        <Card className="relative overflow-hidden p-8 md:p-12 bg-gradient-to-br from-[#1a1a1a] via-[#0a0a0a] to-[#1a1a1a] border-warm/40 group hover:border-warm/60 transition-all duration-500">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.1),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-warm/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-warm-light/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          
+          <div className="relative z-10 text-center">
+            <div className="inline-block mb-6 animate-bounce">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-warm/20 rounded-full flex items-center justify-center backdrop-blur-sm border-2 border-warm/30">
+                <Icon name="Sparkles" size={32} className="text-warm" />
+              </div>
+            </div>
+            
+            <h3 className="text-2xl md:text-4xl font-serif font-bold mb-4 text-white animate-fade-in">
+              Есть безумная идея?
+            </h3>
+            <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              Мы реализуем и её. Опишите задачу — и мы придумаем, как воплотить это технически.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <Button size="lg" className="bg-warm text-dark hover:bg-warm-light hover:scale-105 transition-all duration-300">
+                <Icon name="MessageSquare" className="mr-2" size={20} />
+                Обсудить идею
+              </Button>
+              <Button size="lg" variant="outline" className="border-warm/50 text-warm hover:bg-warm/10 hover:border-warm hover:scale-105 transition-all duration-300">
+                <Icon name="Lightbulb" className="mr-2" size={20} />
+                Примеры работ
+              </Button>
+            </div>
+          </div>
         </Card>
       </section>
 
