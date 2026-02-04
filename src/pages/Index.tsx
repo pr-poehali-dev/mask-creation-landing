@@ -4,17 +4,17 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   const categories = [
-    { title: "Косплей и фестивали", description: "Точная проработка деталей для узнаваемости образа" },
-    { title: "Хоррор-квесты", description: "Износостойкие маски для ежедневной эксплуатации" },
-    { title: "Театр и кино", description: "Реалистичная мимика и комфорт для долгих съемок" },
-    { title: "Коллекции и подарки", description: "Арт-объекты с подставками для интерьера" },
+    { title: "Косплей и фестивали", description: "Точная проработка деталей для узнаваемости образа", img: "https://cdn.poehali.dev/projects/f8def378-8058-4886-b565-bccedcf2e505/files/62a52654-e34b-4c33-84d6-9bbfae0a334b.jpg" },
+    { title: "Хоррор-квесты", description: "Износостойкие маски для ежедневной эксплуатации", img: "https://cdn.poehali.dev/projects/f8def378-8058-4886-b565-bccedcf2e505/files/bc80b5a0-fd20-4393-8ea8-fc460df2c536.jpg" },
+    { title: "Театр и кино", description: "Реалистичная мимика и комфорт для долгих съемок", img: "https://cdn.poehali.dev/projects/f8def378-8058-4886-b565-bccedcf2e505/files/1397b87a-df2b-49cb-82bb-247926328521.jpg" },
+    { title: "Коллекции и подарки", description: "Арт-объекты с подставками для интерьера", img: "https://cdn.poehali.dev/projects/f8def378-8058-4886-b565-bccedcf2e505/files/4943d297-2d9a-4d63-a402-1050e34698ef.jpg" },
   ];
 
   const stats = [
     { value: "30+", label: "Уникальных масок сделано" },
     { value: "7-30", label: "Дней на изготовление" },
-    { value: "Semi-Rigid", label: "Ударопрочный пластик" },
-    { value: "Full Custom", label: "Любые допы: зубы / волосы / LED" },
+    { value: "Полуэластичный", label: "Ударопрочный пластик" },
+    { value: "Полная кастомизация", label: "Любые допы: зубы / волосы / LED" },
   ];
 
   const benefits = [
@@ -81,10 +81,12 @@ const Index = () => {
       </header>
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f]"></div>
+        <div className="absolute inset-0 bg-[#0a0a0a]"></div>
+        <div className="absolute inset-0">
+          <img src="https://cdn.poehali.dev/projects/f8def378-8058-4886-b565-bccedcf2e505/files/1397b87a-df2b-49cb-82bb-247926328521.jpg" alt="Mask" className="w-full h-full object-cover opacity-40" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent"></div>
         <div className="absolute inset-0 noise-texture"></div>
-        <div className="absolute inset-0 concrete-texture opacity-20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-warm/15 via-transparent to-transparent"></div>
         
         <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
           <h1 className="text-5xl md:text-7xl lg:text-9xl font-serif font-bold mb-6 md:mb-8 animate-fade-in leading-[1.1] text-white drop-shadow-[0_0_30px_rgba(249,115,22,0.3)]">
@@ -131,34 +133,41 @@ const Index = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {categories.map((cat, idx) => (
-            <Card key={idx} className="group relative h-[300px] md:h-[400px] bg-graphite border-warm/20 overflow-hidden cursor-pointer hover-scale">
-              <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/60 to-transparent z-10"></div>
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-charcoal to-graphite">
-                <Icon name="Image" size={64} className="text-warm/20" />
+            <Card key={idx} className="group relative h-[300px] md:h-[400px] border-warm/30 overflow-hidden cursor-pointer hover-scale bg-[#0a0a0a]">
+              <div className="absolute inset-0">
+                <img src={cat.img} alt={cat.title} className="w-full h-full object-cover" />
               </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/60 to-transparent z-10"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 z-20">
-                <h3 className="text-xl md:text-2xl font-serif font-bold mb-2">{cat.title}</h3>
-                <p className="text-light/60 text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity">{cat.description}</p>
+                <h3 className="text-xl md:text-2xl font-serif font-bold mb-2 text-white">{cat.title}</h3>
+                <p className="text-white/70 text-xs md:text-sm opacity-0 group-hover:opacity-100 transition-opacity">{cat.description}</p>
               </div>
             </Card>
           ))}
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-b from-dark to-charcoal">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-4 md:mb-6 text-center text-white">История происхождения</h2>
-            <h3 className="text-2xl md:text-4xl font-serif mb-6 md:mb-8 text-center text-warm">Рожденные в суровых условиях квестов</h3>
-            
-            <div className="space-y-4 md:space-y-6 text-base md:text-lg text-light/80 leading-relaxed">
-              <p>Obrazwill начался не с бизнес-плана. Мы создавали хоррор-квесты и устали от масс-маркета. Дешевые маски ломались, давили актерам на лицо и выглядели как пластиковые игрушки.</p>
+      <section className="py-16 md:py-24 bg-[#0a0a0a] relative">
+        <div className="absolute inset-0 noise-texture opacity-50"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            <div>
+              <h2 className="text-4xl md:text-6xl font-serif font-bold mb-4 text-white">История происхождения</h2>
+              <h3 className="text-2xl md:text-3xl font-serif mb-6 text-warm">Рожденные в суровых условиях квестов</h3>
               
-              <blockquote className="border-l-4 border-warm pl-4 md:pl-6 py-4 my-6 md:my-8 text-lg md:text-xl italic text-light">
-                "Мы начали делать сами. Наши маски прошли проверку потом, адреналином и сотнями часов жестких игровых сессий."
-              </blockquote>
-              
-              <p>Если они выдержали это — они выдержат всё. Теперь мы переносим этот опыт (эргономику и неубиваемость) в каждый заказ.</p>
+              <div className="space-y-4 text-base md:text-lg text-white/80 leading-relaxed">
+                <p>Obrazwill начался не с бизнес-плана. Мы создавали хоррор-квесты и устали от масс-маркета. Дешевые маски ломались, давили актерам на лицо и выглядели как пластиковые игрушки.</p>
+                
+                <blockquote className="border-l-4 border-warm pl-4 py-4 my-6 text-lg italic text-white">
+                  "Мы начали делать сами. Наши маски прошли проверку потом, адреналином и сотнями часов жестких игровых сессий."
+                </blockquote>
+                
+                <p>Если они выдержали это — они выдержат всё. Теперь мы переносим этот опыт (эргономику и неубиваемость) в каждый заказ.</p>
+              </div>
+            </div>
+            <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+              <img src="https://cdn.poehali.dev/projects/f8def378-8058-4886-b565-bccedcf2e505/files/d8e72321-0264-4efa-8848-7723d94ec574.jpg" alt="Мастерская" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 to-transparent"></div>
             </div>
           </div>
         </div>
@@ -169,19 +178,19 @@ const Index = () => {
 
         <div className="grid sm:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
           {benefits.map((benefit, idx) => (
-            <Card key={idx} className="p-6 md:p-8 bg-gradient-to-br from-charcoal to-graphite border-warm/20 hover:border-warm/50 transition-all">
+            <Card key={idx} className="p-6 md:p-8 bg-[#111111] border-warm/30 hover:border-warm/60 transition-all">
               <Icon name={benefit.icon} size={40} className="text-warm mb-4" />
-              <h3 className="text-xl md:text-2xl font-serif font-bold mb-3">{benefit.title}</h3>
-              <p className="text-light/70 leading-relaxed text-sm md:text-base">{benefit.description}</p>
+              <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 text-white">{benefit.title}</h3>
+              <p className="text-white/70 leading-relaxed text-sm md:text-base">{benefit.description}</p>
             </Card>
           ))}
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, idx) => (
-            <Card key={idx} className="p-4 md:p-6 bg-charcoal border-warm/20 text-center">
+            <Card key={idx} className="p-4 md:p-6 bg-[#111111] border-warm/30 text-center">
               <div className="text-2xl md:text-4xl font-bold text-warm mb-2">{stat.value}</div>
-              <div className="text-xs md:text-sm text-light/60">{stat.label}</div>
+              <div className="text-xs md:text-sm text-white/70">{stat.label}</div>
             </Card>
           ))}
         </div>
